@@ -31,7 +31,7 @@
 
         /* تنسيق العنوان الرئيسي */
         .main-title {
-            font-size: 2rem; /* حجم كبير للجوال */
+            font-size: 2rem;
             font-weight: 900;
             margin-top: 20px;
             margin-bottom: 30px;
@@ -43,14 +43,14 @@
         /* تنسيق حاوية الفيديو الوهمي */
         .video-wrapper {
             width: 100%;
-            max-width: 800px; /* عرض مناسب يشبه يوتيوب */
+            max-width: 800px;
             position: relative;
             cursor: pointer;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             background-color: #000;
-            aspect-ratio: 16 / 9; /* النسبة القياسية للفيديو */
+            aspect-ratio: 16 / 9;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -58,39 +58,39 @@
         }
 
         .video-wrapper:hover {
-            transform: scale(1.01); /* حركة خفيفة عند المرور */
+            transform: scale(1.01);
         }
 
-        /* الصورة المصغرة (Thumbnail) */
+        /* الصورة المصغرة */
         .thumbnail-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.8; /* تغميق بسيط عشان يبان الزر */
+            opacity: 0.85;
         }
 
-        /* زر التشغيل في المنتصف */
+        /* زر التشغيل الأحمر */
         .play-button {
             position: absolute;
-            width: 70px;
-            height: 50px;
-            background-color: rgba(255, 0, 0, 0.9); /* أحمر يوتيوب */
+            width: 68px;
+            height: 48px;
+            background-color: rgba(255, 0, 0, 1);
             border-radius: 12px;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
         }
 
-        /* مثلث التشغيل داخل الزر */
         .play-button::after {
             content: '';
             border-style: solid;
-            border-width: 10px 0 10px 18px;
+            border-width: 8px 0 8px 14px;
             border-color: transparent transparent transparent white;
         }
 
-        /* زر الدعوة لاتخاذ إجراء أسفل الفيديو */
+        /* زر الدعوة لاتخاذ إجراء */
         .cta-text {
             margin-top: 25px;
             font-size: 1.2rem;
@@ -109,10 +109,10 @@
             color: #fff;
         }
 
-        /* إعدادات خاصة للجوال والايباد */
+        /* إعدادات للجوال */
         @media (max-width: 768px) {
             .main-title {
-                font-size: 1.5rem; /* تصغير الخط للجوال */
+                font-size: 1.5rem;
                 padding: 0 10px;
             }
             
@@ -127,35 +127,20 @@
 
     <h1 class="main-title">كيف تشتري أي شيء بدون ما تدفع شي من جيبك</h1>
 
-    <div class="video-wrapper" onclick="callLocker()">
-        <img src="https://via.placeholder.com/1280x720/000000/FFFFFF?text=Click+to+Watch" alt="Video Thumbnail" class="thumbnail-img" id="myThumbnail">
-        
+    <div class="video-wrapper" onclick="goToLocker()">
+        <img src="https://raw.githubusercontent.com/gnesvas/mypics/main/image.jpg" alt="Video Thumbnail" class="thumbnail-img">
         <div class="play-button"></div>
     </div>
 
-    <div class="cta-text" onclick="callLocker()">
+    <div class="cta-text" onclick="goToLocker()">
         اضغط لمشاهدة الشرح
     </div>
 
     <script>
-        // دالة استدعاء القفل
-        function callLocker() {
-            // ==========================================
-            // هام جداً: هنا تحط كود OGAds حقك
-            // ==========================================
-            
-            alert("هنا سيظهر القفل الخاص بـ OGAds.. يجب عليك وضع الكود الخاص بك في المكان المخصص.");
-            
-            // مثال: إذا عندك رابط مباشر للقفل (Direct Link) استخدم هذا الكود:
-            // window.location.href = "رابط_القفل_حقك_هنا";
-
-            // مثال: إذا عندك سكريبت Content Locker يفتح نافذة (Onclick function)، استدعيه هنا.
+        function goToLocker() {
+            // تحويل مباشر لرابط القفل
+            window.location.href = "https://lenorebhmfut.store/?501a136";
         }
-
-        /* تنبيه: 
-           عشان تطلع الصورة احترافية، لازم تغير رابط الصورة في كود HTML فوق
-           في السطر اللي يبدأ بـ <img src="...">
-        */
     </script>
 
 </body>
